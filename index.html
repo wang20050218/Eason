@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="interests.html">興趣</a></li>
+                <li><a href="contact.html">聯絡資訊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>你好!歡迎來到我的個人網站</h1>
+            <p>請使用側邊的選單來看更多資訊</p>
+            <p>如果想了解我的個人簡介---"關於我"</p>
+            <p>如果想知道我的休閒娛樂---"興趣"</p>
+            <p>如果想跟我交流---"聯絡資訊"</p>
+        </section>
+    </main>
+
+    <footer>
+        <p> 王羽辰製作 </p>
+        <p> 現在時間: </p>
+        <div id="current-time"></div>
+    </footer>
+    <script>
+function updateTime() {
+    const timeElement = document.getElementById("current-time");
+    const now = new Date();
+    const formattedTime = now.toLocaleTimeString("zh-Hant", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    });
+    timeElement.textContent = `${formattedTime}`;
+}
+
+
+setInterval(updateTime, 1000);
+
+
+updateTime();
+    </script>
+</body>
+</html>
+

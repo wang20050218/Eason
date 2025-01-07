@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="about.html">關於我</a></li>
+                <li><a href="interests.html">興趣</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1>聯絡我</h1>
+            <p>可以透過以下平台聯繫我：</p>
+            <ul>
+                <li><a href="https://www.facebook.com/share/15agHdSGwb/?mibextid=wwXIfr" target="_blank">Facebook:あずきの水</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">Instagram:王羽辰</a></li>
+                <li>Gmail:weason2005@gmail.com</li>
+                <li>Phone(Line):0908009370</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p> 王羽辰製作 </p>
+        <p> 現在時間: </p>
+        <div id="current-time"></div>
+    </footer>
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById("current-time");
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString("zh-Hant", {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+            });
+            timeElement.textContent = `${formattedTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

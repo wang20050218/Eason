@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="interests.html">興趣</a></li>
+                <li><a href="contact.html">聯絡資訊</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>關於我</h1>
+            <p>你好！我是王羽辰，目前就讀於台東大學 應用數學系學士班二年級。</p>
+            <p>從小對數學有興趣，因此想要往數學方面鑽研。</p>
+            <p>家裡有四個人，父親是補習班主任兼英文老師，母親是英文老師兼家管，弟弟目前就讀高職建築科。</p>
+            <p>個性內向，較不善於表達，不喜歡跟著別人的步調走，喜歡有主見。</p>
+            <p>出沒地點:高雄ㄉ家、學校、台東ㄉ租屋處。</p>
+        </section>
+        <section id="gallery">
+            <h2>一些照片</h2>
+            <div class="gallery-grid">
+                <img src="image1.jpg" class="gallery-item">
+                <img src="image2.jpg" alt="作品2" class="gallery-item">
+                <img src="image3.jpg" alt="作品3" class="gallery-item">
+                <img src="image4.jpg" alt="作品4" class="gallery-item">
+            </div>
+               <script src="scripts.js"></script>
+        </section>
+    </main>
+
+    <footer>
+        <p> 王羽辰製作 </p>
+        <p> 現在時間: </p>
+        <div id="current-time"></div>
+    </footer>
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById("current-time");
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString("zh-Hant", {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+            });
+            timeElement.textContent = `${formattedTime}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+    </script>
+</body>
+</html>
